@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Godaddy-DDNS", "Godaddy-DDNS\Godaddy-DDNS.csproj", "{B6B72401-EB6B-41A0-85C2-1874404CECE4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B6B72401-EB6B-41A0-85C2-1874404CECE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6B72401-EB6B-41A0-85C2-1874404CECE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6B72401-EB6B-41A0-85C2-1874404CECE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6B72401-EB6B-41A0-85C2-1874404CECE4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ED4850A0-C556-4486-A491-11D9440817B4}
+	EndGlobalSection
+EndGlobal
