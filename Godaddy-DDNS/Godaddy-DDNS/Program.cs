@@ -32,6 +32,7 @@ namespace Godaddy_DDNS
                 string ip_now = "";
                 string godaddy_api = $"https://api.godaddy.com/v1/domains/{domain}/records/A/{hostname}";
                 var godaddy_ip = Get_GoDaddy_IP(godaddy_api,api_key,api_secret);
+                Console.WriteLine($"The A record of Godaddy of {hostname}.{domain} is {godaddy_ip.Result.ToString()}");
                 godaddy_ip.Wait();
                 ipRequest.Method = "GET";
                 using(var response = (HttpWebResponse)ipRequest.GetResponse())
@@ -40,7 +41,8 @@ namespace Godaddy_DDNS
                     {
                         using(StreamReader reader = new StreamReader(stream,Encoding.UTF8))
                         {
-                            ip_now = reader.ReadToEnd();                            
+                            ip_now = reader.ReadToEnd();
+                            Console.WriteLine($"The local IP now is {ip_now}");
                         }
                     }
                 }
@@ -112,11 +114,11 @@ namespace Godaddy_DDNS
                     if(response.Result.IsSuccessStatusCode)
                     {
                         var result = await response.Result.Content.ReadAsStringAsync();
-                        Console.WriteLine($"IP updated to {ipaddr}");
+                        Console.WriteLine($"A record updated to {ipaddr}");
                     }
                     else
                     {
-                        Console.WriteLine("IP updated failed");
+                        Console.WriteLine("A record updated failed");
                     }
                 }
                 
