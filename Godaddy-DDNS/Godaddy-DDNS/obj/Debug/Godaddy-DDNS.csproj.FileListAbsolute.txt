@@ -7,3 +7,13 @@ C:\Users\hayato.yu\source\repos\Godaddy-Dynamic\Godaddy-DDNS\Godaddy-DDNS\obj\De
 C:\Users\hayato.yu\source\repos\Godaddy-Dynamic\Godaddy-DDNS\Godaddy-DDNS\obj\Debug\Godaddy-DDNS.csproj.CopyComplete
 C:\Users\hayato.yu\source\repos\Godaddy-Dynamic\Godaddy-DDNS\Godaddy-DDNS\obj\Debug\Godaddy-DDNS.exe
 C:\Users\hayato.yu\source\repos\Godaddy-Dynamic\Godaddy-DDNS\Godaddy-DDNS\obj\Debug\Godaddy-DDNS.pdb
+C:\Users\j4m0w\Source\Repos\hayatoyu\Godaddy-Dynamic\Godaddy-DDNS\Godaddy-DDNS\bin\Debug\Godaddy-DDNS.exe.config
+C:\Users\j4m0w\Source\Repos\hayatoyu\Godaddy-Dynamic\Godaddy-DDNS\Godaddy-DDNS\bin\Debug\Godaddy-DDNS.exe
+C:\Users\j4m0w\Source\Repos\hayatoyu\Godaddy-Dynamic\Godaddy-DDNS\Godaddy-DDNS\bin\Debug\Godaddy-DDNS.pdb
+C:\Users\j4m0w\Source\Repos\hayatoyu\Godaddy-Dynamic\Godaddy-DDNS\Godaddy-DDNS\bin\Debug\Newtonsoft.Json.dll
+C:\Users\j4m0w\Source\Repos\hayatoyu\Godaddy-Dynamic\Godaddy-DDNS\Godaddy-DDNS\bin\Debug\Newtonsoft.Json.xml
+C:\Users\j4m0w\Source\Repos\hayatoyu\Godaddy-Dynamic\Godaddy-DDNS\Godaddy-DDNS\obj\Debug\Godaddy-DDNS.csproj.AssemblyReference.cache
+C:\Users\j4m0w\Source\Repos\hayatoyu\Godaddy-Dynamic\Godaddy-DDNS\Godaddy-DDNS\obj\Debug\Godaddy-DDNS.csproj.CoreCompileInputs.cache
+C:\Users\j4m0w\Source\Repos\hayatoyu\Godaddy-Dynamic\Godaddy-DDNS\Godaddy-DDNS\obj\Debug\Godaddy-DDNS.csproj.CopyComplete
+C:\Users\j4m0w\Source\Repos\hayatoyu\Godaddy-Dynamic\Godaddy-DDNS\Godaddy-DDNS\obj\Debug\Godaddy-DDNS.exe
+C:\Users\j4m0w\Source\Repos\hayatoyu\Godaddy-Dynamic\Godaddy-DDNS\Godaddy-DDNS\obj\Debug\Godaddy-DDNS.pdb

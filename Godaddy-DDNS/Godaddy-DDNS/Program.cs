@@ -102,9 +102,7 @@ namespace Godaddy_DDNS
             {
                 client.DefaultRequestHeaders.Authorization =
                     new System.Net.Http.Headers.AuthenticationHeaderValue("sso-key", $"{api_key}:{api_secret}");
-                var data = new Class.GD_DNS { data = ipaddr, name = "mvp2", ttl = 60, type = "A" };
                 List<Class.GD_DNS> list = new List<Class.GD_DNS>();
-                list.Add(data);
                 using(var content = new StringContent("[{\"data\":\"" + ipaddr + "\"}]",Encoding.UTF8,"application/json"))
                 {
                     var response = client.PutAsync(url, content);

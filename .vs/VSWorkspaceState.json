@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Godaddy-DDNS",
+    "\\Godaddy-DDNS\\Godaddy-DDNS"
   ],
-  "SelectedNode": "\\Godaddy-DDNS.sln",
+  "SelectedNode": "\\Godaddy-DDNS\\Godaddy-DDNS\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
