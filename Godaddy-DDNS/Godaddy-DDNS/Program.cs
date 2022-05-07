@@ -27,28 +27,16 @@ namespace Godaddy_DDNS
                 string api_secret = args[3];
                 //Console.WriteLine(domain + "\t" + hostname + "\t" + api_key + "\t" + api_secret);
                 
-                var ipcheck_url = "https://api.ipify.org";
-                var ipRequest = (HttpWebRequest)WebRequest.Create(ipcheck_url);
-                string ip_now = "";
+                var ip_now = Get_Local_IP();
                 string godaddy_api = $"https://api.godaddy.com/v1/domains/{domain}/records/A/{hostname}";
                 var godaddy_ip = Get_GoDaddy_IP(godaddy_api,api_key,api_secret);
                 Console.WriteLine($"The A record of Godaddy of {hostname}.{domain} is {godaddy_ip.Result.ToString()}");
                 godaddy_ip.Wait();
-                ipRequest.Method = "GET";
-                using(var response = (HttpWebResponse)ipRequest.GetResponse())
-                {
-                    using(var stream = response.GetResponseStream())
-                    {
-                        using(StreamReader reader = new StreamReader(stream,Encoding.UTF8))
-                        {
-                            ip_now = reader.ReadToEnd();
-                            Console.WriteLine($"The local IP now is {ip_now}");
-                        }
-                    }
-                }
+                ip_now.Wait();
+                
                 if(!ip_now.Equals(godaddy_ip.Result.ToString()))
                 {
-                    Update_DNS(godaddy_api, ip_now,api_key,api_secret);
+                    Update_DNS(godaddy_api, ip_now.Result.ToString(),api_key,api_secret);
                 }
             }
             catch(IndexOutOfRangeException ex)
@@ -69,6 +57,16 @@ namespace Godaddy_DDNS
                 Console.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + ex.GetType() + "Message: " + ex.Message);
             }
             
+        }
+
+        static async Task<string> Get_Local_IP()
+        {
+            using (var httpClient = new HttpClient())
+            {
+                var ip = await httpClient.GetStringAsync("https://api.ipify.org");
+                Console.WriteLine($"The local IP is {ip}");
+                return ip;
+            }
         }
 
         static async Task<string> Get_GoDaddy_IP(string url,string api_key,string api_secret)
