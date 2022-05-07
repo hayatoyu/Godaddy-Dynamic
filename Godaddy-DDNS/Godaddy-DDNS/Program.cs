@@ -34,7 +34,7 @@ namespace Godaddy_DDNS
                 godaddy_ip.Wait();
                 ip_now.Wait();
                 
-                if(!ip_now.Equals(godaddy_ip.Result.ToString()))
+                if(!ip_now.Result.ToString().Equals(godaddy_ip.Result.ToString()))
                 {
                     Update_DNS(godaddy_api, ip_now.Result.ToString(),api_key,api_secret);
                 }
