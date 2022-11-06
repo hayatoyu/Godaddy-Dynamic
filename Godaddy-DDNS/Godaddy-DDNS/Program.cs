@@ -30,13 +30,17 @@ namespace Godaddy_DDNS
                 var ip_now = Get_Local_IP();
                 string godaddy_api = $"https://api.godaddy.com/v1/domains/{domain}/records/A/{hostname}";
                 var godaddy_ip = Get_GoDaddy_IP(godaddy_api,api_key,api_secret);
-                Console.WriteLine($"The A record of Godaddy of {hostname}.{domain} is {godaddy_ip.Result.ToString()}");
+                Console.WriteLine($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} - The A record of Godaddy of {hostname}.{domain} is {godaddy_ip.Result.ToString()}");
                 godaddy_ip.Wait();
                 ip_now.Wait();
                 
                 if(!ip_now.Result.ToString().Equals(godaddy_ip.Result.ToString()))
                 {
                     Update_DNS(godaddy_api, ip_now.Result.ToString(),api_key,api_secret);
+                }
+                else
+                {
+                    Console.WriteLine($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} - The IP address is already up-to-date.");
                 }
             }
             catch(IndexOutOfRangeException ex)
@@ -64,7 +68,7 @@ namespace Godaddy_DDNS
             using (var httpClient = new HttpClient())
             {
                 var ip = await httpClient.GetStringAsync("https://api.ipify.org");
-                Console.WriteLine($"The local IP is {ip}");
+                Console.WriteLine($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} - The local IP is {ip}");
                 return ip;
             }
         }
@@ -109,11 +113,11 @@ namespace Godaddy_DDNS
                     if(response.Result.IsSuccessStatusCode)
                     {
                         var result = await response.Result.Content.ReadAsStringAsync();
-                        Console.WriteLine($"A record updated to {ipaddr}");
+                        Console.WriteLine($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} - A record updated to {ipaddr}");
                     }
                     else
                     {
-                        Console.WriteLine("A record updated failed");
+                        Console.WriteLine($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} - A record updated failed");
                     }
                 }
                 
