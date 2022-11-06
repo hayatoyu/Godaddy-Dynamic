@@ -1,0 +1,1 @@
+"D:\排程\godaddy-ddns\Godaddy-DDNS.exe" hayatoyu.site shelter1 fYW9PXuLsHNx_Xf84ijCyXb4xMjacEic9s8 NmahBBTErLtPRLkXV83qfS >> "D:\排程\godaddy-ddns\log.txt"
